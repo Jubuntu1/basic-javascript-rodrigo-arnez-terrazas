@@ -49,6 +49,8 @@ function division(a, b) {
     return Number(res) === a/b;
 }
 
+
+
 function juego() {
   console.log("JUEGO DE CALCULOS");
   let puntos = 0;
@@ -100,10 +102,13 @@ function juego() {
       }
         break;
         case 3:
+          if(opB===0){
+            opB++;
+          }
             opA=opB*getRandomInt(10);
-         
+
             if (division(opA, opB)) {
-                if (miliS > 3000) {
+                if (miliS > tiempo) {
                   return console.log("tiempo agotado\nPuntos: " + puntos);
                   /*fin = true;*/
                 }
